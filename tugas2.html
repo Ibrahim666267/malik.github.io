@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Online Sederhana</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f7ff; /* Biru pucat */
+        }
+        header {
+            background-color: #1e90ff; /* Biru dodger */
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            background-color: #4682b4; /* Biru baja */
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #87ceeb; /* Biru langit */
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+        .product-card {
+            border: 2px solid #b0c4de; /* Biru baja terang */
+            border-radius: 10px;
+            background-color: #f0f8ff; /* Alice blue */
+            width: 220px;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 255, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 10px;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 255, 0.2);
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .product-card h3 {
+            color: #4682b4; /* Biru baja */
+        }
+        .product-card p {
+            color: #1e90ff; /* Biru dodger */
+        }
+        .product-card button {
+            background-color: #4682b4; /* Biru baja */
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .product-card button:hover {
+            background-color: #1e90ff; /* Biru dodger */
+        }
+        .footer {
+            background-color: #1e90ff; /* Biru dodger */
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            width: 100%;
+        }
+        .contact-section {
+            padding: 20px;
+            background-color: #f0f8ff; /* Alice blue */
+            text-align: center;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #b0c4de;
+        }
+        .contact-form button {
+            background-color: #4682b4; /* Biru baja */
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #1e90ff; /* Biru dodger */
+        }
+
+        /* Media query untuk tampilan mobile */
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product-card {
+                width: 100%;
+                max-width: 300px;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Toko Online Sederhana</h1>
+    </header>
+    <nav>
+        <a href="#home">Beranda</a>
+        <a href="#products">Produk</a>
+        <a href="#contact">Kontak</a>
+    </nav>
+
+    <div class="container" id="products">
+        <div class="product-card">
+            <img src="https://cdn1-production-images-kly.akamaized.net/EjwV7j3Y4JrlqUFuavke4NtRWtM=/1200x675/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3108566/original/079979700_1587487794-Sajiku_1.jpg" alt="Nasi Goreng">
+            <h3>Nasi Goreng</h3>
+            <p>Rp 50.000</p>
+            <button>Beli Sekarang</button>
+        </div>
+        <div class="product-card">
+            <img src="https://asset.kompas.com/crops/BJdOTeUCdwHWS6ImI9qDnf3s8nI=/0x0:1000x667/1200x800/data/photo/2023/12/19/6580e31d4d33e.jpeg" alt="Sate Ayam">
+            <h3>Sate Ayam</h3>
+            <p>Rp 40.000</p>
+            <button>Beli Sekarang</button>
+        </div>
+        <div class="product-card">
+            <img src="https://asset.kompas.com/crops/QsUYn6p5xK4DsivCrxa0_TXdjuk=/10x36:890x623/1200x800/data/photo/2023/03/25/641e5ef63dea4.jpg" alt="Rendang">
+            <h3>Rendang</h3>
+            <p>Rp 70.000</p>
+            <button>Beli Sekarang</button>
+        </div>
+        <div class="product-card">
+            <img src="https://cdn.idntimes.com/content-images/community/2022/04/gado-gado-isinya-apa-saja-filosofi-gad-gado-cara-membuat-sambal-gado-gado-9cde86371d7fc78c91ae80a6ffab250e-b8137bb1e610c76f5f65dfc312f4cdc0_600x400.jpg" alt="Gado-Gado">
+            <h3>Gado-Gado</h3>
+            <p>Rp 30.000</p>
+            <button>Beli Sekarang</button>
+        </div>
+        <div class="product-card">
+            <img src="https://cdn0-production-images-kly.akamaized.net/02RtaroW5kpQZWMxtHwT60iuQxI=/800x450/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/2029093/original/066661300_1521949447-Bakso.jpg" alt="Bakso">
+            <h3>Bakso</h3>
+            <p>Rp 25.000</p>
+            <button>Beli Sekarang</button>
+        </div>
+        <div class="product-card">
+            <img src="https://www.dapurkobe.co.id/wp-content/uploads/mie-goreng-saus-tiram.jpg" alt="Mie Goreng">
+            <h3>Mie Goreng</h3>
+            <p>Rp 20.000</p>
+            <button>Beli Sekarang</button>
+        </div>
+        <div class="product-card">
+            <img src="https://www.thehealthybelly.co/storage/product/media_1617781998_0.jpeg" alt="Soto Ayam">
+            <h3>Soto Ayam</h3>
+            <p>Rp 35.000</p>
+            <button>Beli Sekarang</button>
+        </div>
+        <div class="product-card">
+            <img src="https://lingkar.news/wp-content/uploads/2023/03/Aneka-Resep-Pempek-Makanan-Tradisional-Khas-Palembang.jpg" alt="Pempek">
+            <h3>Pempek</h3>
+            <p>Rp 30.000</p>
+            <button>Beli Sekarang</button>
+        </div>
+        <div class="product-card">
+            <img src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/124/2024/06/09/7-Rekomendasi-Es-Teler-yang-Segar-dan-Enak-Sampai-Bikin-Ngiler-1518934036.jpg" alt="Es Teler">
+            <h3>Es Teler</h3>
+            <p>Rp 15.000</p>
+            <button>Beli Sekarang</button>
+        </div>
+    </div>
+
+    <div class="contact-section" id="contact">
+        <h2>Kontak untuk Pemesanan</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Nama Anda" required>
+            <input type="email" placeholder="Email Anda" required>
+            <input type="tel" placeholder="Nomor Telepon" required>
+            <textarea placeholder="Pesan Anda" rows="4" required></textarea>
+            <button type="submit">Kirim Pesan</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Toko Online Sederhana. Semua Hak Dilindungi.</p>
+    </div>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
